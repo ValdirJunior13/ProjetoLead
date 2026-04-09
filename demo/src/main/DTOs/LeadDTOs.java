@@ -1,17 +1,20 @@
-public record LeadDTO(String nome, String email, 
+import java.time.LocalDateTime;
+
+public record CreateLeadDto(
+    String name, 
+    String email, 
+    String sourceSystem
+) {}
+public record UpdateLeadDto(
+    String name, 
+    String status
+) {}
+
+public record LeadResponseDto(
+    int id, 
+    String name, 
+    String email, 
     String status, 
     String sourceSystem, 
-    String externalId, 
-    LocalDateTime createdAt,
-    LocalDateTime updatedAt){
-
-}
-
-public record UpdateLeadDto(String status, String name) {
-    
-}
-
-public record CreateLeadDto (String name, String email, String SourceSystem) {
-    
-}
-
+    LocalDateTime createdAt
+) {}
